@@ -1,7 +1,13 @@
 
 
 export default function Cell({value, handleClick}){
-    return (
-        <button className="cell" onClick={handleClick}> {value} </button>
-    );
+    if(value == 'X'){
+        return (
+            <button className="cell x" onClick={handleClick}> {value} </button>
+        )
+    }else{
+        return (
+            <button className="cell o" onClick={handleClick}> {value} </button>
+        )
+    };
 }

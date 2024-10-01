@@ -7,10 +7,10 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
-  /* font-synthesis: none; */
+  font-synthesis: none;
   text-rendering: optimizeLegibility;
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -25,8 +25,8 @@ a:hover {
 body {
   font-family: 'Arial', sans-serif;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   height: 100vh;
   margin: 0;
 }
@@ -34,13 +34,8 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
- 
-}
-
-h1:hover {
   filter: drop-shadow(0 0 0.2em #da61e6);
 }
-
 
 button {
   border-radius: 8px;

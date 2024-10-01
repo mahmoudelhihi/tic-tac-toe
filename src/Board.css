@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -31,35 +31,61 @@ h1 {
   transition: background-color 0.3s ease;
 }
 
-.cell:hover {
+.cell:active {
   background-color: #f7f7f7;
   color: #333;
 }
 
-.cell.x {
+.x {
   color: #3498db;
 }
 
-.cell.o {
+.o {
   color: #e74c3c;
-}
-
-#message {
-  margin-top: 20px;
-  font-size: 1.5rem;
 }
 
 button {
   margin-top: 20px;
   padding: 10px 20px;
+  margin: auto 10px;
   font-size: 1rem;
-  background-color: #3498db;
+  background-color: transparent;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-button:hover {
+/* button:hover {
   background-color: #2980b9;
+} */
+
+.win-message {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  background-color: #bdbebd;
+  color: white; 
+  font-size: 1rem; 
+  font-weight: bold; 
+  padding: 10px; 
+  text-align: center; 
+  border: 2px solid black; 
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  width: 100%; 
+  max-width: 500px; 
+  margin: auto; 
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
 }
+
+.win-message.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.win-message.hidden {
+  opacity: 0;
+  transform: scale(0.95);
+}
+

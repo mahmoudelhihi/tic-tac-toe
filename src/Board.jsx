@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import Cell from './Cell';
+import Message from './Message';
 import './Board.css'
 
-var move = 'X';
 export default function Board() {
     const [board, setBoard] = useState(Array(9).fill(null));
     const [currentMove, setCurrentMove] = useState('X');
@@ -12,7 +12,9 @@ export default function Board() {
         const winner = checkWinner(board);
         if (winner) {
             setWinner(winner);  
-            alert(`The winner is: ${winner}`);
+            // setTimeout(() => 
+            //     // alert(`The winner is: ${winner}`);
+            // , 130);
         }
     }, [board]);
 
@@ -50,6 +52,7 @@ export default function Board() {
     }
 
     return (
+        <>{winner && <Message winner={winner} />}
         <div className="board">
             <div className="row">
                 <Cell value={board[0]} handleClick={() => {handleMove(0); }}/>
@@ -67,5 +70,6 @@ export default function Board() {
                 <Cell value={board[8]} handleClick={() => {handleMove(8); }}/>
             </div>
         </div>
+        </>
     );
 }
